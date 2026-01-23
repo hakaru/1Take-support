@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<nav style="margin:12px 0 24px; display:flex; gap:12px; align-items:center;">
+  <a href="{{ '/' | relative_url }}">Support</a>
+  <a href="{{ '/privacy' | relative_url }}">Privacy</a>
+  <a href="{{ '/blog/en/' | relative_url }}">Blog</a>
+  <a href="{{ '/blog/ja/' | relative_url }}">ブログ</a>
+  <span style="flex:1;"></span>
+
+  {% if page.url contains '/blog/ja/' %}
+    <a href="{{ page.url | replace: '/blog/ja/', '/blog/en/' | relative_url }}">EN</a>
+  {% elsif page.url contains '/blog/en/' %}
+    <a href="{{ page.url | replace: '/blog/en/', '/blog/ja/' | relative_url }}">日本語</a>
+  {% endif %}
+</nav>
+
+{{ content }}
+
