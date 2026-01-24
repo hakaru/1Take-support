@@ -6,6 +6,8 @@ tags: [1Take, iPhone, microphone, AGC, Input Trim, vDSP, iOS, Pro Max, audio eng
 summary: "The truth behind Apple's 'flat' iPhone microphones. AGC's unwanted interference, the maze of mic placement across models, and how 1Take transformed them into musical instruments."
 ---
 
+
+
 ## Introduction
 
 I'm the developer of 1Take. I've been discussing the "output side" of audio—compressors, LUFS metering—but today I'm cutting into the biggest black box of all: the iPhone's built-in microphone.
