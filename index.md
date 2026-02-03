@@ -54,6 +54,8 @@ If you have questions or feedback, please contact us at:
 
 ## Links
 
+- [User Manual](manual/en/)
+- [Changelog](changelog)
 - [Privacy Policy](privacy)
 
 ---

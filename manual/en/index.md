@@ -14,15 +14,16 @@ Welcome to 1Take, the professional audio recording app designed for musicians. T
 
 1. [Getting Started](#getting-started)
 2. [Recording Basics](#recording-basics)
-3. [Presets](#presets)
-4. [Signal Processing Chain](#signal-processing-chain)
-5. [Pre-roll Recording](#pre-roll-recording)
-6. [Auto-Record](#auto-record)
-7. [Meters](#meters)
-8. [Markers](#markers)
-9. [Recordings Library](#recordings-library)
-10. [Settings](#settings)
-11. [Pro Features](#pro-features)
+3. [Recording Analysis](#recording-analysis)
+4. [Presets](#presets)
+5. [Signal Processing Chain](#signal-processing-chain)
+6. [Pre-roll Recording](#pre-roll-recording)
+7. [Auto-Record](#auto-record)
+8. [Meters](#meters)
+9. [Markers](#markers)
+10. [Recordings Library](#recordings-library)
+11. [Settings](#settings)
+12. [Pro Features](#pro-features)
 
 ---
 
@@ -60,6 +61,41 @@ During recording, tap the **Marker** button to add a user marker at the current 
 When you stop recording, an alert shows:
 - **Duration**: Total recording length
 - **Integrity**: Percentage of audio data successfully captured (aim for 100%)
+
+---
+
+## Recording Analysis
+
+1Take v1.3.0 introduces automatic recording quality analysis using broadcast-standard algorithms (ITU-R BS.1770-4).
+
+### What Gets Analyzed
+
+After each recording, 1Take automatically evaluates:
+
+- **Peak Level (dBFS)**: Maximum sample value (-6 to -12 dBFS is ideal)
+- **RMS Level (dBFS)**: Average loudness over time
+- **Crest Factor (dB)**: Dynamic range (Peak minus RMS)
+- **LUFS**: Perceived loudness (target -14 to -16 LUFS for streaming)
+- **True Peak (dBTP)**: Inter-sample peak level (keep below -1 dBTP)
+- **Loudness Range (LRA)**: Statistical loudness variation
+
+### How to Use
+
+Recording analysis runs automatically when you stop recording. The results help you:
+
+1. **Identify clipping issues** - If True Peak exceeds -1 dBTP
+2. **Check loudness** - Compare Integrated LUFS to streaming standards
+3. **Evaluate dynamics** - Crest Factor shows compression amount
+4. **Improve technique** - Consistent results indicate good mic technique
+
+### Reference Values
+
+| Metric | Good Range | Notes |
+|--------|------------|-------|
+| Peak | -12 to -6 dBFS | Leave headroom |
+| LUFS | -16 to -14 LUFS | Streaming standard |
+| True Peak | Below -1 dBTP | Prevents clipping |
+| Crest Factor | 8-14 dB | Balanced dynamics |
 
 ---
 
@@ -102,8 +138,13 @@ Adjusts digital gain before processing. Use the TRIM knob on the main screen.
 ### Noise Gate
 Cuts background noise between phrases. Adjust threshold with the THRESH knob.
 
-### 4-Band EQ
-Shape your tone with Low, Low-Mid, High-Mid, and High bands.
+### 5-Band Parametric EQ
+Shape your tone with five fully adjustable bands. Each band provides:
+- **Frequency**: Center frequency selection
+- **Gain**: Boost or cut (±12 dB)
+- **Q**: Bandwidth control (narrow to wide)
+
+The visual frequency response curve shows your EQ settings with draggable control points.
 
 ### 2-Stage Compressor
 - **Comp A**: Fast compressor for catching peaks
@@ -140,7 +181,18 @@ You're jamming and play something amazing. Even if you press record 10 seconds l
 
 Auto-Record automatically starts and stops recording based on audio levels.
 
-### Setup
+### Intelligent Calibration (New in v1.3.0)
+
+1Take v1.3.0 introduces automatic threshold calibration:
+
+1. Tap the **Auto** button in Auto-Record settings
+2. 1Take measures your ambient noise floor
+3. Thresholds are automatically calculated with optimal margins
+4. Hysteresis control prevents false triggers
+
+This makes setup effortless - just tap Auto in a quiet moment before you play!
+
+### Manual Setup
 
 1. Go to Settings → Auto-Record
 2. Enable Auto-Record
@@ -194,13 +246,16 @@ Professional loudness meter following ITU-R BS.1770-4 standard.
 
 ## Markers
 
-1Take supports three types of markers:
+1Take supports automatic markers to help you identify important moments:
 
 ### User Markers
 Manually added by tapping the Marker button during recording. Use these to mark important moments.
 
-### Clip Markers
-Automatically added when audio clips (distorts). These help you find and fix problem areas.
+### Clip Markers (CLIP)
+Automatically added when audio clips (exceeds 0 dBFS). These help you find potential distortion areas.
+
+### Over Markers (OVER)
+Automatically added when True Peak exceeds -1 dBTP. Indicates inter-sample peaks that may cause issues in playback.
 
 ### Buffer Drop Markers (💔)
 Automatically added if audio data is lost due to system performance issues. Indicates potential quality problems.
@@ -254,7 +309,11 @@ Set the pre-roll buffer duration. Pro users can extend up to 30 seconds.
 
 ### Auto-Record
 
-Configure automatic recording triggers.
+Configure automatic recording triggers. Use the **Auto** button for intelligent calibration.
+
+### Keep Screen On (New in v1.3.0)
+
+Enable this option to prevent your device from sleeping during long recording sessions. Useful for extended practice or live recording scenarios.
 
 ---
 
