@@ -147,6 +147,6 @@ Whether you're in a pro studio or a garage practice space, the quality of your s
 
 ## Related Articles
 
-- [Voice Memos vs 1Take: 5 Reasons Musicians Should Switch]({% post_url 2026-03-08-voice-memos-vs-1take %})
-- [The Complete Guide to High-Quality iPhone Recording]({% post_url 2026-03-08-iphone-pro-recording-guide %})
-- [1Take v1.3.2: MP3/AAC Export, Batch Export, and Pro Enhancements]({% post_url 2026-03-08-1take-v132-new-features %})
+- [Voice Memos vs 1Take: 5 Reasons Musicians Should Switch](/blog/en/2026-03-08-voice-memos-vs-1take/)
+- [The Complete Guide to High-Quality iPhone Recording](/blog/en/2026-03-08-iphone-pro-recording-guide/)
+- [1Take v1.3.2: MP3/AAC Export, Batch Export, and Pro Enhancements](/blog/en/2026-03-08-1take-v132-new-features/)
