@@ -227,7 +227,7 @@ Your iPhone is capable of remarkably professional recordings when you apply the 
 Input Trim. Real-time compression. LUFS metering.
 Turn your iPhone into a professional recording tool.
 
-[Download on the App Store](https://apps.apple.com/app/1take/id6737562471)
+[Download on the App Store](https://apps.apple.com/app/1take/id6757945099)
 
 ---
 
