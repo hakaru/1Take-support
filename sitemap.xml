@@ -1,0 +1,70 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hakaru.net/1Take-support/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/index-ja</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/privacy</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/privacy-ja</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/changelog</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/changelog-ja</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/manual/en/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/manual/ja/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/blog/en/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hakaru.net/1Take-support/blog/ja/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.7</priority>
+  </url>
+  {% for post in site.posts_en %}
+  <url>
+    <loc>https://hakaru.net/1Take-support{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+  {% for post in site.posts_ja %}
+  <url>
+    <loc>https://hakaru.net/1Take-support{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+</urlset>

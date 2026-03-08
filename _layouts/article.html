@@ -2,6 +2,30 @@
 layout: default
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "hakaru"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "hakaru apps",
+    "url": "https://hakaru.net/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hakaru.net/1Take-support{{ page.url }}"
+  }{% if page.summary %},
+  "description": {{ page.summary | jsonify }}{% endif %}
+}
+</script>
+
 <nav style="margin:12px 0 24px; display:flex; gap:12px; align-items:center;">
   <a href="{{ '/' | relative_url }}">Support</a>
   <a href="{{ '/privacy' | relative_url }}">Privacy</a>

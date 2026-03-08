@@ -231,3 +231,9 @@ iPhoneをプロの録音機材に変える1Takeを、ぜひお試しください
 
 - [サポートページ](/)
 - [プライバシーポリシー](/privacy-ja)
+
+## 関連記事
+
+- [ボイスメモ vs 1Take 徹底比較]({% post_url 2026-03-08-voice-memos-vs-1take %})
+- [DAWに直接持ち込める録音 - 1Take Proの24bit BWFワークフロー]({% post_url 2026-03-08-daw-workflow-with-1take-pro %})
+- [1Take v1.3.2：MP3/AACエクスポート、一括エクスポート、Pro機能の強化]({% post_url 2026-03-08-1take-v132-new-features %})

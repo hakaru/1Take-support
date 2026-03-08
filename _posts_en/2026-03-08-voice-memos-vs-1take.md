@@ -157,3 +157,9 @@ Your playing deserves better sound.
 
 - [Support Page](/)
 - [Privacy Policy](/privacy)
+
+## Related Articles
+
+- [The Complete Guide to High-Quality iPhone Recording]({% post_url 2026-03-08-iphone-pro-recording-guide %})
+- [DAW-Ready Recording with 1Take Pro's 24-bit BWF Workflow]({% post_url 2026-03-08-daw-workflow-with-1take-pro %})
+- [1Take v1.3.2: MP3/AAC Export, Batch Export, and Pro Enhancements]({% post_url 2026-03-08-1take-v132-new-features %})
