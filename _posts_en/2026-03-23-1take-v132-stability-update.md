@@ -3,12 +3,23 @@ title: "1Take v1.3.2: Stability Improvements"
 date: 2026-03-23
 kind: release
 tags: [1Take, release, v1.3.2, bugfix, stability]
-summary: "v1.3.2 fixes crashes reported via Firebase Crashlytics, improving playback and recording stability."
+summary: "v1.3.2 fixes crashes and makes deleted recordings recoverable from the Files app."
 ---
 
 ## 1Take v1.3.2 Stability Update
 
-**1Take v1.3.2** is now available on the App Store. This update addresses crashes reported by users through Crashlytics, improving overall app stability.
+**1Take v1.3.2** is now available on the App Store. This update fixes crashes and improves recording deletion behavior.
+
+---
+
+## Improvements
+
+### Deleted Recordings Are Now Recoverable
+
+When you delete a recording, the audio file is now moved to **"Recently Deleted"** in the Files app instead of being permanently removed.
+
+- Accidentally deleted recordings can be **recovered for up to 30 days**
+- The delete confirmation dialog now informs you that recovery is possible
 
 ---
 
